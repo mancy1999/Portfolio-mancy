@@ -1,0 +1,134 @@
+<mat-card>
+  <mat-card-content>
+    <!-- test use flex module -->
+    <div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between">
+      <div>
+        <small>
+          總市值(HK$)
+        </small>
+      </div>
+      <div>
+        <small>
+          日盈虧
+        </small>
+      </div>
+    </div>
+    <!-- test use css flex -->
+    <div class="summary">
+      <div>
+        <small>
+          {{porf.total_marketCap}}
+        </small>
+      </div>
+      <div>
+        <small>
+          {{porf.daily_profit}}
+        </small>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+    <div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between">
+      <div>
+        <small>
+          浮動盈虧
+        </small>
+        <br>
+        <small>+10000</small>
+      </div>
+      <div>
+        <small>
+          浮動盈虧率
+        </small>
+        <br>
+        <small>+10%</small>
+      </div>
+      <div>
+        <small>
+          累計盈虧
+        </small>
+        <br>
+        <small>+10000</small>
+      </div>
+      <div>
+        <small>
+          累計盈虧率
+        </small>
+        <br>
+        <small>+10%</small>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="space-between">
+      <button mat-flat-button style="width: 50%; height: 2rem">重刷</button>
+      <button mat-flat-button color="primary" style="width: 50%; height: 2rem">新增</button>
+    </div>
+    <div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between">
+      <div>
+        <small>
+          股票名稱
+        </small>
+      </div>
+      <div>
+        <small>
+          市值/數量
+        </small>
+      </div>
+      <div>
+        <small>
+          現價/成本
+        </small>
+      </div>
+      <div>
+        <small>
+          浮動盈虧
+        </small>
+      </div>
+    </div>
+    <div *ngFor="let data of portfolio_data">
+      <div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between">
+        <div>
+          <small>
+            {{data.desc}}
+          </small>
+          <br>
+          <small>
+            {{data.symbol}}
+          </small>
+        </div>
+        <div>
+          <small>
+            {{data.marketCap}}
+          </small>
+          <br>
+          <small>
+            {{data.quan}}
+          </small>
+        </div>
+        <div>
+          <small>
+            {{data.last}}
+          </small>
+          <br>
+          <small>
+            {{data.cost_price}}
+          </small>
+        </div>
+        <div>
+          <small>
+            {{data.profit}}
+          </small>
+          <br>
+          <small>
+            {{data.profit_percent}}
+          </small>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+
+
+
+
+  </mat-card-content>
+</mat-card>

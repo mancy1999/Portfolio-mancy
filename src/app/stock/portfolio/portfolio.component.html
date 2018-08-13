@@ -1,0 +1,50 @@
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <div fxFlex="20%">
+        <app-stock-watcher-wizard></app-stock-watcher-wizard>
+    </div>
+    <div fxFlex="60%">
+        <mat-card>
+            <img matCardImage src=" http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=3&indpara1=5&indpara2=10&indpara3=20&indpara4=50&indpara5=250&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&ref3para1=0&ref3para2=0&ref3para3=0&subChart4=5&ref4para1=12&ref4para2=0&ref4para3=0&subChart5=4&ref5para1=9&ref5para2=0&ref5para3=0&scheme=3&com=100&chartwidth=880&chartheight=1000&stockid=000001.HK&period=9&type=1&logoStyle=1& ">
+        </mat-card>
+    </div>
+    <div fxFlex="20% ">
+        <div class="container" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="top">
+            <div>
+                <app-stock-portfolio-wizard></app-stock-portfolio-wizard>
+            </div>
+
+            <div>
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>indicator?</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions align="start">
+                        <button mat-button (click)="onAction1">Action1</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div>
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>News or related things</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                        <mat-icon matListIcon class="mat-18">1</mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions align="start">
+                        <button mat-button (click)="onAction1">Action1</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

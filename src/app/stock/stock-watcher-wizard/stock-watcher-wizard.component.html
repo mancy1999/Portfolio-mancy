@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-content style="height: 90vh; overflow-y: auto">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        Stock-watcher
+        <span class="example-spacer"></span>
+        <button mat-icon-button color="primary">
+          <mat-icon aria-label="add">add</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Simple</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>voicemail</mat-icon>
+            <span>Complex</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Order by Pct Desc</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Order by Pct Asc</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+
+
+    <div *ngFor="let stock of stocks">
+      <mat-grid-list cols="2" rowHeight="fit" [style.height]="'100px'" [gutterSize]="'1px'">
+        <mat-grid-tile *ngFor="let obj of objToArray(stock)" [colspan]="1" [rowspan]="1">
+          {{obj.key}} : {{obj.value}}
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-divider></mat-divider>
+    </div>
+
+
+
+    <!-- <mat-nav-list dense>
+      <mat-list-item *ngFor="let stock of stocks">
+        <mat-grid-list cols="2" rowHeight="fit" [style.height]="'200px'" [gutterSize]="'1px'">
+          <mat-grid-tile [colspan]="1" [rowspan]="1">{{stock.name}}</mat-grid-tile>
+          <mat-grid-tile [colspan]="1" [rowspan]="1">{{stock.desc}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-list-item>
+    </mat-nav-list> -->
+
+  </mat-card-content>
+</mat-card>
